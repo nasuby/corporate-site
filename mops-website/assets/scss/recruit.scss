@@ -1,0 +1,175 @@
+$defaultMarginTop: 10rem;
+$defaultPadding: 0 2rem;
+
+.kvRecruit {
+  position: relative;
+
+  &__bgImage {
+    & > img {
+      width: 100%;
+      object-fit: cover;
+      filter: brightness(0.5);
+    }
+  }
+
+  &__text {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    > h1 {
+      width: max-content;
+      text-align: center;
+      color: #ffffff;
+      font-size: 2.2rem;
+      font-weight: bold;
+      padding: 0 0 3px 5px;
+      border-bottom: #ffffff 2px solid;
+    }
+  }
+}
+
+.recruitmentType {
+  padding: $defaultPadding;
+
+  &__title {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 6rem;
+    font-weight: bold;
+
+    & > h2 {
+      display: inline-block;
+      border-bottom: 2px solid #008a0e;
+    }
+  }
+
+  &__description {
+    text-align: center;
+    font-size: 1.35rem;
+  }
+
+  &__items {
+    margin: $defaultMarginTop;
+
+    @media screen and (max-width: 425px) {
+      margin: 3rem auto;
+    }
+
+    & > ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+
+      @media screen and (max-width: 425px) {
+        display: block;
+      }
+
+      & > li {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 50px;
+        padding: 10px 5px;
+        border: 1px solid #008a0e;
+        transition: 0.3s;
+        box-shadow: 0px 3px 10px -3px rgb(0 0 0 / 50%);
+        cursor: pointer;
+
+        @media screen and (max-width: 425px) {
+          width: 100%;
+          margin-bottom: 16px;
+        }
+
+        &:hover {
+          background-color: #008a0e;
+          color: #ffffff;
+        }
+
+        & > a {
+          display: flex;
+          flex: 1;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          font-weight: bold;
+          word-break: break-all;
+        }
+      }
+    }
+  }
+}
+
+.recruitDetail {
+  padding: 0 5rem;
+  max-width: 1024px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 425px) {
+    padding: 0 2rem;
+  }
+
+  &__title {
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #8e8e8e;
+    font-size: 2rem;
+  }
+
+  &__detail {
+    margin-bottom: 3rem;
+    line-height: 1.6rem;
+    // MEMO: 強制的にwidthを指定する
+    div {
+      max-width: 800px !important;
+    }
+
+    h1 {
+      margin: 1.5rem 0 1rem;
+      padding-left: 0.7rem;
+      font-size: 1.4rem;
+      font-weight: bold;
+      border-left: 8px solid #008a0e;
+    }
+
+    h2 {
+      margin: 1.2rem 0 0.8rem;
+      padding-bottom: 0.8rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-bottom: 1px solid #008a0e;
+    }
+
+    h3 {
+      margin: 1rem 0 0.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    h4 {
+      margin-bottom: 0.8rem;
+      font-size: 1rem;
+    }
+
+    h5 {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    h6 {
+      font-size: 1rem;
+    }
+
+    // MEMO: 画面幅を超えるのを防ぐため強制的に指定
+    img {
+      width: 100%;
+      max-width: 800px !important;
+      max-height: 100vh;
+      object-fit: cover;
+    }
+  }
+}

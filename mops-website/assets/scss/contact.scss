@@ -1,0 +1,54 @@
+$defaultMarginTop: 10rem;
+$defaultPadding: 0 2rem;
+
+.kvContact {
+  position: relative;
+
+  &__bgImage {
+    & > img {
+      width: 100%;
+      object-fit: cover;
+      filter: brightness(0.5);
+    }
+  }
+
+  &__text {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    > h1 {
+      width: max-content;
+      text-align: center;
+      color: #ffffff;
+      font-size: 2.2rem;
+      font-weight: bold;
+      padding: 0 0 3px 5px;
+      border-bottom: #ffffff 2px solid;
+    }
+  }
+}
+
+.contactDetail {
+  padding: 0 5rem;
+  max-width: 1024px;
+  margin: 0 auto;
+
+  &__title {
+    margin-bottom: 5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #8e8e8e;
+    font-size: 2rem;
+  }
+
+  &__detail {
+    margin-bottom: 3rem;
+    & > h1 {
+      margin-bottom: 1rem;
+      padding-left: 1rem;
+      font-size: 1.6rem;
+      border-left: 10px solid #008a0e;
+    }
+  }
+}

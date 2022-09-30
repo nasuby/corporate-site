@@ -1,0 +1,25 @@
+.breadcrumb {
+  margin: 3rem auto;
+  width: 100%;
+  max-width: 768px;
+
+  @media screen and (max-width: 425px) {
+    padding: 0 2rem;
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  a {
+    color: #00bd3c;
+    text-decoration: underline;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
